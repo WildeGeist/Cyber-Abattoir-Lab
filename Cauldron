@@ -1,0 +1,98 @@
+Fedora Workstation First Boot
+
+The Thunker depicts a Monster engaged in Thunking, the act of thinking Thunks, profound thinks that are never spoken aloud. And it even has a pecking bird in the ancient "Art Monstreau" style - divine!
+
+
+Get root #
+
+$ sudo passwd root [Enter]
+follow instructions…
+Congratulations!
+
+Login to root:
+$ su – [Enter]
+root passwd [Enter]
+
+# yum install tox apt alien make cmake-gui golang @cinnamon-desktop-environment gimp audacity qemu virt-manager emacs etherape hydra-frontend [Enter]
+
+Type y and hit Enter when prompted Yes or No type y and Enter unless something obvious looks screwed up. Let it do its thing. When done_
+
+# yum update [Enter]
+nothing to do
+# reboot [Enter]
+
+***********
+
+At splash screen Login ‘click’ and look bottom right and notice a tiny wheel looking thing. Click this and select Cinnamon and ‘click’ that_
+
+Enter Login Information
+
+Move Cursor to Panel and Right Click to Unlock Panel Settings, click Applets and update Applets and install Spices Update Applet. Refresh then open System Settings to Themes. Update and Refresh Themes and add Adapta-Nokto ( use whatever you like. I use Adapta-Nokto Dark almost exclusively ) and go back down and Lock Panel again.
+
+Open Firefox
+
+Download from Internet and save in Downloads ( we are going to reboot once more before installing these downloads ) Chrome ( if you use Chromium disregard and download Opera or Vivaldi or Otter Browser or Midori ) and/or Opera Web Browser, Hyper Terminal https://releases.hyper.is/download/rpm  VS Code ( VS Codium or Code OSS if your a Chromium buff ), GitKraken, go-ipfs-desktop x86_64.rpm https://github.com/ipfs-shipyard/ipfs-desktop/releases , Jet Brains Toolbox App https://www.jetbrains.com/toolbox-app/download/download-thanks.html 
+
+Create a Go Language Environment
+
+Follow these instructions online  ( golang is already installed now ) to create your environment ) https://developer.fedoraproject.org/tech/languages/go/go-installation.html
+
+Click on your Folder thingy in the Panel and in Downloads double-click ‘toolbox-app’ when prompted Extract Contents anywhere. Doubleclick the contents of the folder and wait……. When the Install script is done the Jet Brains Toolbox App will prompt you to create a Jet Brains Account. No biggie. When done you can install Pycharm Community, InteliJ Community and Android Studio optional. 
+
+REBOOT SYSTEM
+
+On your Cinnamon Desktop Open your Downloads Folder and Double Click each download one at a time to have the software manager install each one.
+
+Type in Applications finder/launcher dnf and choose DNF Dragora App & Open
+
+Select Installed Software and type in the Search “ Firefox “ un-check the Firefox Box. Do the same for Thunderbird and Fedora-Contacts. We are removing these from dnf and of your system.
+
+You can do similar in Terminal in root
+
+# yum remove firefox lightning thunderbird [ Enter ]
+
+
+
+REBOOT SYSTEM
+
+Find your new Web Browser of choice ie Chromium, Chrome, Opera, Midori, Vivaldi, Otter Browser whichever is your now new Default Web Browser and set it up.
+
+Chrome and Chromium install the IPFS Companion Extension with Developer Mode turned on and update Extensions. ** In Opera install Enable Chrome Extensions Extension and simply Install IPFS Companion Extension https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch?hl=en
+
+From the Applications Launcher Open IPFS Desktop. It can take some time to appear to do anything. The Script sets off an installer to install all the latest IPFS goodies available, or a lot of them. If it does not automatically start on its own and the Universe does not shake, in Terminal simply type 
+
+$ ipfs daemon [ Enter ]
+
+Congratulations, You now have a Go Programming Language Environment as well as a full IPFS User World. More on this later.
+
+We are going to install Cockpit with all the bells and whistles now.
+
+Click on this link and read over this page https://www.redhat.com/sysadmin/intro-cockpit
+
+Now lets do it! In Terminal ( You now have Hyper Terminal so can use either Terminal ) type_
+
+*** Pay Attention Now to $ verses # . A lot of the stuff here on out matters if its sudo or root ****
+
+$ sudo dnf install cockpit [ Enter ]
+type your User Password [ Enter ]
+$ sudo dnf install cockpit-dashboard cockpit-podman cockpit-machines cockpit-networkmanager cockpit-packagekit cockpit-storaged [ Enter ]
+
+When everything looks done, make sure its done by an Update.
+
+From root
+
+# yum update { Enter ]
+nothing to do / or hit y to allow all to update
+
+Now we are going to drop down a level by typing exit then hit Enter 
+
+# exit [ Enter ]
+$ sudo dnf check-update
+[sudo] password for your-user-name: Your-Password [ Enter ]
+
+Let it find all the possible Updates
+Is this ok [y/N]: y [ Enter ]
+# reboot
+
+Once System Reboots and you are in your Desktop go through things and set up your Desktop Environment to suit you best. Get to know where everything is for a few minutes. Put your tools in your Panel like mine I do it like this.
+
